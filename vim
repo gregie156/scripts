@@ -1,2 +1,3 @@
 ignorecase
 smartcase
+:set incsearch

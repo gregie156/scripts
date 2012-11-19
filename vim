@@ -1,3 +1,0 @@
-ignorecase
-smartcase
-:set incsearch

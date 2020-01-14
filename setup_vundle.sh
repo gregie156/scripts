@@ -54,6 +54,10 @@ touch ~/.vimrc &&
   
   " adds ctrl-p and if you have ctags, also shfit-p
   Plugin 'kien/ctrlp.vim'
+  
+  " tagbar bound to F9
+  " https://github.com/majutsushi/tagbar
+  Plugin 'majutsushi/tagbar'
 
 
   " All of your Plugins must be added before the following line
@@ -91,6 +95,8 @@ set tabstop=4  " tabs to be 4 wide
 set shiftwidth=4  " when doing shift 
 
 map <S-P> :CtrlPTag<CR>
+nnoremap <silent> <F9> :TagbarOpen fj<CR>
+
 HEREDOC
 }
 

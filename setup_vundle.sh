@@ -98,6 +98,7 @@ set expandtab  " turn tabs to spaces
 set tabstop=4  " tabs to be 4 wide
 set shiftwidth=4  " when doing shift 
 
+set visualbell " no loud noises on error
 
 map <S-P> :CtrlPTag<CR>
 nnoremap <silent> <F9> :TagbarOpen fj<CR>

@@ -1,7 +1,13 @@
 #!/usr/bin/env bash
 
 echo "#######################################"
-echo "run this script with: 'bash <(curl https://raw.githubusercontent.com/gregie156/scripts/master/setup_vundle.sh)'"
+echo "run this script with: 'bash <(curl -L https://tiny.cc/vundle)'"
+
+echo "it's meant to be run on Linux as the user who's going to be using VIM"
+echo "it installs Vundle, a vim plugin manager, plus some basic plugins."
+echo "it adds ctrl-P for fuzze file navigation, and shift-P for ctag-navigation"
+echo "Fixes some vim mouse issues and some other minor things."
+
 echo "see https://github.com/VundleVim/Vundle.vim for more info"
 echo "find more plugins at https://vimawesome.com/"
 echo "#######################################"
@@ -28,13 +34,13 @@ touch ~/.vimrc &&
   
   " plugin on GitHub repo
   " https://github.com/tpope/vim-fugitive
-  Plugin 'tpope/vim-fugitive'
+  " Plugin 'tpope/vim-fugitive'
   " plugin from http://vim-scripts.org/vim/scripts.html
   " Plugin 'L9'
   
   " Git plugin not hosted on GitHub
   " https://github.com/wincent/command-t
-  Plugin 'git://git.wincent.com/command-t.git'
+  " Plugin 'git://git.wincent.com/command-t.git'
   
   " git repos on your local machine (i.e. when working on your own plugin)
   " Plugin 'file:///home/gmarik/path/to/plugin'

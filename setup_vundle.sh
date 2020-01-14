@@ -5,7 +5,7 @@ echo "run this script with: 'bash <(curl -L https://tiny.cc/vundle)' as the user
 
 echo "it installs Vundle, a vim plugin manager, plus some basic plugins."
 echo "it adds <ctrl-P> for fuzze file navigation, and <shift-P> for ctag-navigation."
-echo "And <F9> for tagbar
+echo "And <F9> for tagbar"
 echo "Fixes some vim mouse issues and some other minor things."
 
 echo "see https://github.com/VundleVim/Vundle.vim for more info"

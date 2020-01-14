@@ -25,21 +25,28 @@ touch ~/.vimrc &&
 
   " The following are examples of different formats supported.
   " Keep Plugin commands between vundle#begin/end.
+  
   " plugin on GitHub repo
+  " https://github.com/tpope/vim-fugitive
   Plugin 'tpope/vim-fugitive'
   " plugin from http://vim-scripts.org/vim/scripts.html
   " Plugin 'L9'
+  
   " Git plugin not hosted on GitHub
+  " https://github.com/wincent/command-t
   Plugin 'git://git.wincent.com/command-t.git'
+  
   " git repos on your local machine (i.e. when working on your own plugin)
-  Plugin 'file:///home/gmarik/path/to/plugin'
+  " Plugin 'file:///home/gmarik/path/to/plugin'
+  
   " The sparkup vim script is in a subdirectory of this repo called vim.
   " Pass the path to set the runtimepath properly.
-  Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+  " Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
   " Install L9 and avoid a Naming conflict if you've already installed a
   " different version somewhere else.
   " Plugin 'ascenator/L9', {'name': 'newL9'}
   
+  " adds ctrl-p and if you have ctags, also shfit-p
   Plugin 'kien/ctrlp.vim'
 
 

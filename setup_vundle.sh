@@ -5,7 +5,7 @@ echo "run this script with: 'bash <(curl -L https://tiny.cc/vundle)' as the user
 
 echo "it installs Vundle, a vim plugin manager, plus some basic plugins."
 echo "it adds <ctrl-P> for fuzze file navigation, and <shift-P> for ctag-navigation."
-echo "And <F9> for tagbar"
+echo "<F9> for tagbar, <S-~> for file navigation"
 echo "Fixes some vim mouse issues and some other minor things."
 
 echo "see https://github.com/VundleVim/Vundle.vim for more info"
@@ -59,6 +59,8 @@ touch ~/.vimrc &&
   " https://github.com/majutsushi/tagbar
   Plugin 'majutsushi/tagbar'
 
+  " Nerd Tree alternative file explorer
+  Plugin 'scrooloose/nerdtree'
 
   " All of your Plugins must be added before the following line
   call vundle#end()            " required
@@ -86,6 +88,8 @@ set mouse=a
 set ttymouse=xterm2 " another good setting could be ttymouse=sgr
 set wildmenu
 
+set showcmd " show currently entered command
+
 set ignorecase
 set smartcase
 set incsearch
@@ -94,8 +98,11 @@ set expandtab  " turn tabs to spaces
 set tabstop=4  " tabs to be 4 wide
 set shiftwidth=4  " when doing shift 
 
+
 map <S-P> :CtrlPTag<CR>
 nnoremap <silent> <F9> :TagbarOpen fj<CR>
+map ~ :NERDTreeToggle<CR>
+
 
 HEREDOC
 }

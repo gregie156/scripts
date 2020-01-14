@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
 echo "#######################################"
-echo "run this script with: 'bash <(curl -L https://tiny.cc/vundle)'"
+echo "run this script with: 'bash <(curl -L https://tiny.cc/vundle)' as the user who uses Vim"
 
-echo "it's meant to be run on Linux as the user who's going to be using VIM"
 echo "it installs Vundle, a vim plugin manager, plus some basic plugins."
-echo "it adds ctrl-P for fuzze file navigation, and shift-P for ctag-navigation"
+echo "it adds <ctrl-P> for fuzze file navigation, and <shift-P> for ctag-navigation."
+echo "And <F9> for tagbar
 echo "Fixes some vim mouse issues and some other minor things."
 
 echo "see https://github.com/VundleVim/Vundle.vim for more info"

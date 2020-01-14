@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 echo "#######################################"
-echo "run this script with: 'bash <(curl https://raw.githubusercontent.com/gregie156/git-utils/master/setup_vundle.sh)'"
+echo "run this script with: 'bash <(curl https://raw.githubusercontent.com/gregie156/scripts/master/setup_vundle.sh)'"
 echo "see https://github.com/VundleVim/Vundle.vim for more info"
 echo "find more plugins at https://vimawesome.com/"
 echo "#######################################"

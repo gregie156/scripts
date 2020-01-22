@@ -28,6 +28,10 @@ call vundle#begin()
     Plugin 'kien/ctrlp.vim'        " ctrlP for fuzzy file search and fuzzy tag search
     Plugin 'majutsushi/tagbar'     " outline of file structure with classes and methods
     Plugin 'scrooloose/nerdtree'   " better file browser
+    Plugin 'davidhalter/jedi-vim'    " intellisense/autocompletion 
+    Plugin 'andviro/ropevim-bundled' " for refactoring
+    Plugin 'scrooloose/syntastic'  " static type checking
+    
 call vundle#end()  "required
 filetype plugin indent on  " required
                                                                                                                                      
@@ -59,6 +63,18 @@ set visualbell " no loud noises on error
 map <S-P> :CtrlPTag<CR>
 nnoremap <silent> <F9> :TagbarOpen fj<CR>
 map <F8> :NERDTreeToggle<CR>
+
+" syntastic basic settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_python_mypy_args = "--py2"
+let g:syntastic_python_checkers = ["mypy" ]
 
 HEREDOC
 }

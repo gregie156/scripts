@@ -17,65 +17,18 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim &
 touch ~/.vimrc &&
 
 { cat > /tmp/.vimrc <<-HEREDOC
-  set nocompatible              " be iMproved, required
-  filetype off                  " required
+set nocompatible              " Set Vim and not VI mode. required.
+filetype off                  " required
 
-  " set the runtime path to include Vundle and initialize
-  set rtp+=~/.vim/bundle/Vundle.vim
-  call vundle#begin()
-  " alternatively, pass a path where Vundle should install plugins
-  "call vundle#begin('~/some/path/here')
-
-  " let Vundle manage Vundle, required
-  Plugin 'VundleVim/Vundle.vim'
-
-  " The following are examples of different formats supported.
-  " Keep Plugin commands between vundle#begin/end.
-  
-  " plugin on GitHub repo
-  " https://github.com/tpope/vim-fugitive
-  " Plugin 'tpope/vim-fugitive'
-  " plugin from http://vim-scripts.org/vim/scripts.html
-  " Plugin 'L9'
-  
-  " Git plugin not hosted on GitHub
-  " https://github.com/wincent/command-t
-  " Plugin 'git://git.wincent.com/command-t.git'
-  
-  " git repos on your local machine (i.e. when working on your own plugin)
-  " Plugin 'file:///home/gmarik/path/to/plugin'
-  
-  " The sparkup vim script is in a subdirectory of this repo called vim.
-  " Pass the path to set the runtimepath properly.
-  " Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-  " Install L9 and avoid a Naming conflict if you've already installed a
-  " different version somewhere else.
-  " Plugin 'ascenator/L9', {'name': 'newL9'}
-  
-  " adds ctrl-p and if you have ctags, also shfit-p
-  Plugin 'kien/ctrlp.vim'
-  
-  " tagbar bound to F9
-  " https://github.com/majutsushi/tagbar
-  Plugin 'majutsushi/tagbar'
-
-  " Nerd Tree alternative file explorer
-  Plugin 'scrooloose/nerdtree'
-
-  " All of your Plugins must be added before the following line
-  call vundle#end()            " required
-  filetype plugin indent on    " required
-  " To ignore plugin indent changes, instead use:
-  "filetype plugin on
-  "
-  " Brief help
-  " :PluginList       - lists configured plugins
-  " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-  " :PluginSearch foo - searches for foo; append `!` to refresh local cache
-  " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-  "
-  " see :h vundle for more details or wiki for FAQ
-  " Put your non-Plugin stuff after this line
+set rtp+=~/.vim/bundle/Vundle.vim  " needed for vundle to work
+call vundle#begin()
+    Plugin 'VundleVim/Vundle.vim'  " vundle plugin manager
+    Plugin 'kien/ctrlp.vim'        " ctrlP for fuzzy file search and fuzzy tag search
+    Plugin 'majutsushi/tagbar'     " outline of file structure with classes and methods
+    Plugin 'scrooloose/nerdtree'   " better file browser
+call vundle#end()  "required
+filetype plugin indent on  " required
+                                                                                                                                     
 HEREDOC
 } &&
 cat ~/.vimrc >> /tmp/.vimrc &&
@@ -84,26 +37,26 @@ cp /tmp/.vimrc ~/.vimrc &&
 vim +PluginInstall +qall && 
 
 { cat >> ~/.vimrc <<HEREDOC
-set mouse=a 
+set mouse=a
 set ttymouse=xterm2 " another good setting could be ttymouse=sgr
-set wildmenu
-
+set wildmenu  " show possible menu items as you type. Ueseful with :e and :split
 set showcmd " show currently entered command
 
+" better search behaviour
 set ignorecase
 set smartcase
 set incsearch
 
+" tabs are important for python
 set expandtab  " turn tabs to spaces
 set tabstop=4  " tabs to be 4 wide
-set shiftwidth=4  " when doing shift 
+set shiftwidth=4  " when doing shift
 
 set visualbell " no loud noises on error
 
 map <S-P> :CtrlPTag<CR>
 nnoremap <silent> <F9> :TagbarOpen fj<CR>
-map ~ :NERDTreeToggle<CR>
-
+map <F8> :NERDTreeToggle<CR>
 
 HEREDOC
 }

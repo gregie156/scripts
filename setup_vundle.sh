@@ -31,6 +31,11 @@ call vundle#begin()
     Plugin 'davidhalter/jedi-vim'    " intellisense/autocompletion 
     Plugin 'andviro/ropevim-bundled' " for refactoring
     Plugin 'scrooloose/syntastic'  " static type checking
+    Plugin 'ludovicchabant/vim-gutentags'  " automatic ctags management
+    Plugin 'tpope/vim-fugitive' " git integration
+    Plugin 'vim-airline/vim-airline'  " better status line
+    Plugin 'vim-airline/vim-airline-themes'" status line themes 
+
     
 call vundle#end()  "required
 filetype plugin indent on  " required
@@ -64,6 +69,10 @@ map <S-P> :CtrlPTag<CR>
 nnoremap <silent> <F9> :TagbarOpen fj<CR>
 map <F8> :NERDTreeToggle<CR>
 
+" make vim tab-completions behave like Linux
+set wildmode=longest,list,full
+
+
 " syntastic basic settings
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -75,6 +84,9 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_python_mypy_args = "--py2"
 let g:syntastic_python_checkers = ["mypy" ]
+
+" airline plugin configuration
+let g:airline_inactive_collapse=0
 
 HEREDOC
 }

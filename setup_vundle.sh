@@ -14,7 +14,7 @@ echo "see https://github.com/VundleVim/Vundle.vim for more info"
 echo "find more plugins at https://vimawesome.com/"
 echo "#######################################"
 
-rm -rf ~/.vim/bundle/Vundle.vim &&
+ls ~/.vim/bundle/Vundle.vim ||
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim &&
 
 touch ~/.vimrc &&

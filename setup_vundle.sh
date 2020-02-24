@@ -3,10 +3,10 @@
 echo "#######################################"
 echo "run this script with: 'bash <(curl -L https://tiny.cc/vundle)' as the user who uses Vim"
 echo "If you don't have anything important in your Vim environemnt, you might want to wipe it."
-echo "You can, by doing , by doing 'rm -rf ~/.vim*'"
+echo "You can wipe it by doing 'rm -rf ~/.vim*'"
 
-echo "it installs Vundle, a vim plugin manager, plus some basic plugins."
-echo "it adds <ctrl-P> for fuzze file navigation, and <shift-P> for ctag-navigation."
+echo "The script installs Vundle, a vim plugin manager. Plus some basic plugins."
+echo "It adds <ctrl-P> for fuzze file navigation, and <shift-P> for ctag-navigation."
 echo "<F9> for tagbar, <S-~> for file navigation"
 echo "Fixes some vim mouse issues and some other minor things."
 

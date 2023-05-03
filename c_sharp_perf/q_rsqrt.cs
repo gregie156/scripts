@@ -1,7 +1,7 @@
 using System;
 using System.Diagnostics;
 
-//*
+/*
 regular: 28400
 quick:   258101
 https://en.wikipedia.org/wiki/Fast_inverse_square_root
